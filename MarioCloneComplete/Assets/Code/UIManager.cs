@@ -22,6 +22,11 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        coinText = GameObject.Find("CoinText").GetComponent<TextMeshProUGUI>();
+    }
+
     public void UpdateCoinText(int coin)
     {
         coinsCollected += coin;
