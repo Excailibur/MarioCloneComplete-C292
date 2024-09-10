@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlatformScript : MonoBehaviour
@@ -40,18 +41,19 @@ public class PlatformScript : MonoBehaviour
     void LoopPlatform()
     {
         //Check if the platform is a moving platform
-        if (!canMove) { return; }
+        if (canMove) {
+            if (canMoveX)
+            {
+                LoopHorizontal();
+            }
+
+            if (canMoveY)
+            {
+                LoopVertical();
+            }
+        }
         
-        if (canMoveX)
-        {
-            LoopHorizontal();
-        }
-
-        if (canMoveY)
-        {
-            LoopVertical();
-        }
-
+        //Check if the platform is a rotating platform
         if (canRotate)
         {
             //RotatePlatform();
