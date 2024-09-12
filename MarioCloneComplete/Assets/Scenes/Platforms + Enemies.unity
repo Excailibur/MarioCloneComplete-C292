@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -490,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6609f3cc8aeb875479d4077a4c799b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 5
+  runSpeed: 30
   jumpForce: 5
   direction: {x: 0, y: 0}
 --- !u!212 &1086763384
@@ -608,7 +609,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 50
   m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -2004,10 +2005,10 @@ SceneRoots:
   - {fileID: 1086763385}
   - {fileID: 1358896427}
   - {fileID: 1455450203}
-  - {fileID: 1457087544}
-  - {fileID: 2143252367}
-  - {fileID: 299242854}
   - {fileID: 1443956140}
   - {fileID: 1807447031}
   - {fileID: 1866419954}
+  - {fileID: 1457087544}
+  - {fileID: 2143252367}
+  - {fileID: 299242854}
   - {fileID: 1686145705}

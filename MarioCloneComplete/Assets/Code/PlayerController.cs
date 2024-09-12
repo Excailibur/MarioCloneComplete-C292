@@ -39,7 +39,24 @@ public class PlayerController : MonoBehaviour
     }
     private void Move()
     {
-        float moveInput = Input.GetAxis("Horizontal");
-        transform.Translate(moveInput * Vector2.right * runSpeed * Time.deltaTime);
+        float move = Input.GetAxis("Horizontal");
+
+        transform.Translate(Vector2.right * move * runSpeed * Time.deltaTime);
+
+        //Vector2 moveDir = Vector2.zero;
+        //if (Input.GetKey(KeyCode.A))
+        //{
+        //    moveDir = Vector2.left;
+        //}
+        //else if (Input.GetKey(KeyCode.D))
+        //{
+        //    moveDir = Vector2.right;
+        //}
+        //else
+        //{
+        //    moveDir = Vector2.zero;
+        //}
+
+        //rb.velocity = new Vector2(moveDir.x * runSpeed, rb.velocity.y);
     }
 }
