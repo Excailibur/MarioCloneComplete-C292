@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -27,10 +28,21 @@ public class UIManager : MonoBehaviour
         coinText = GameObject.Find("CoinText").GetComponent<TextMeshProUGUI>();
     }
 
+    private void Update()
+    {
+        ReloadScene();
+    }
     public void UpdateCoinText(int coin)
     {
         coinsCollected += coin;
         coinText.text = "x " + coinsCollected;
     }
 
+    public void ReloadScene()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+    }
 }
